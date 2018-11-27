@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>评价</title>
+		<link rel="stylesheet" type="text/css" href="css/minRating.css" />
+	</head>
+
+	<body>
+		<div class="content">
+			<p class="title">半颗星评分</p>
+			<div id="startone" class="block clearfix">
+				<div class="star_score"></div>
+				<p style="float:left;">您的评分：<span class="fenshu"></span> 分</p>
+				<div class="attitude"></div>
+			</div>
+			<p class="title">1颗星评分</p>
+			<div id="starttwo" class="block clearfix">
+				<div class="star_score"></div>
+				<p style="float:left;">您的评分：<span class="fenshu"></span> 分</p>
+				<div class="attitude"></div>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/minRating.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			scoreFun($("#startone"))
+			scoreFun($("#starttwo"), {
+				fen_d: 24, //每一个a的宽度
+				ScoreGrade: 5 //a的个数5
+			});
+		</script>
+	</body>
+
+</html>
